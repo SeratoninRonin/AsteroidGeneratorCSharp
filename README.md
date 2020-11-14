@@ -1,0 +1,1 @@
+This is a procedural asteroid generator for Godot.  It is my first attempt at a plugin using C#.  I'm not sure how useful it would be in an actual game, as there are better ways of doing this, even in Godot.  But it is presented as a simple example of how one might start making plugins in C# for Godot.

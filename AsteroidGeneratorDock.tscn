@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://AsteroidGeneratorDock.cs" type="Script" id=1]
+
+
+[node name="AsteroidGeneratorDock" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1.0
+margin_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="."]
+anchor_top = 0.00123564
+anchor_right = 1.0
+anchor_bottom = 1.00124
+margin_left = -3.08752e-05
+margin_top = 0.8909
+margin_bottom = 0.89093
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GenerateMeshButton" type="Button" parent="VBox"]
+margin_right = 1281.0
+margin_bottom = 20.0
+text = "Generate Mesh"
+
+[node name="SaveMeshButton" type="Button" parent="VBox"]
+margin_top = 24.0
+margin_right = 1281.0
+margin_bottom = 44.0
+text = "Save Mesh"
+
+[node name="SaveConvexShapeButton" type="Button" parent="VBox"]
+margin_top = 48.0
+margin_right = 1281.0
+margin_bottom = 68.0
+text = "Save Convex Shape"
+
+[node name="SaveTrimeshShapeButton" type="Button" parent="VBox"]
+margin_top = 72.0
+margin_right = 1281.0
+margin_bottom = 92.0
+text = "Save Trimesh Shape"
+[connection signal="pressed" from="VBox/GenerateMeshButton" to="." method="OnGenerate"]
+[connection signal="pressed" from="VBox/SaveMeshButton" to="." method="OnSaveMesh"]
+[connection signal="pressed" from="VBox/SaveConvexShapeButton" to="." method="OnSaveConvexShape"]
+[connection signal="pressed" from="VBox/SaveTrimeshShapeButton" to="." method="OnSaveShape"]
